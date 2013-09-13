@@ -314,6 +314,9 @@ usage(const char *name)
 "-N            Generate namecoin address\n"
 "-T            Generate bitcoin testnet address\n"
 "-S            Generate securecoin address\n"
+"-Q            Generate quarkcoin address\n"
+"-Z            Generate zetacoin address\n"
+"-L            Generate florincoin address\n"
 "-X <version>  Generate address with the given version\n"
 "-F <format>   Generate address with the given format (pubkey or script)\n"
 "-P <pubkey>   Specify base public key for piecewise key generation\n"
@@ -362,7 +365,7 @@ main(int argc, char **argv)
 
 	int i;
 
-	while ((opt = getopt(argc, argv, "vqnrik1eE:P:NTSX:F:t:h?f:o:s:")) != -1) {
+	while ((opt = getopt(argc, argv, "vqnrik1eE:P:NTSQLZX:F:t:h?f:o:s:")) != -1) {
 		switch (opt) {
 		case 'v':
 			verbose = 2;
@@ -390,6 +393,21 @@ main(int argc, char **argv)
 			privtype = 180;
 			scriptaddrtype = -1;
 			break;
+        case 'Q':
+            addrtype = 58;
+            privtype = 128;
+            scriptaddrtype = -1;
+            break;
+        case 'Z':
+            addrtype = 80; 
+            privtype = 224;
+            scriptaddrtype = -1;
+            break;
+        case 'L':
+            addrtype = 35; 
+            privtype = 163;
+            scriptaddrtype = 8;
+            break;
 		case 'T':
 			addrtype = 111;
 			privtype = 239;
