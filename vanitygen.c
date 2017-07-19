@@ -396,7 +396,7 @@ main(int argc, char **argv)
 			break;
         case 'Q':
             addrtype = 58;
-            privtype = 128;
+            privtype = 61;
             scriptaddrtype = -1;
             break;
         case 'Z':
@@ -406,7 +406,7 @@ main(int argc, char **argv)
             break;
 	case 'G':
             addrtype = 38; 
-            privtype = 128;
+            privtype = 166;
             scriptaddrtype = -1;
             break;
         case 'L':
